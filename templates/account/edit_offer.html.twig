@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier mon offre{% endblock %}
+
+{% block content %}
+    <div class="account_edit">
+        <div class="account_edit__bloc">
+            <div class="account_edit__form">
+                <h2>Modifier mon offre</h2>
+                <form method="post" enctype="multipart/form-data">
+                
+                    <label for="name">Nouveau nom de votre offre</label>
+                    <input type="text" name="name" value="{{ product.name }}" class="form-control">
+                
+                    <label for="description" id="form_label">Nouvelle description de votre offre</label>
+                    <textarea name="description" class="form-control">{{ product.description }}</textarea>
+                    
+                    <label for="price" id="form_label">Nouveau prix de votre offre</label>
+                    <input type="text" name="price" value="{{ product.price }}" class="form-control">
+                    
+                    <div class="mb-3">
+                        <label for="image" id="form_label" class="form-label">Nouvelle image de votre offre</label>
+                        <input type="file" name="image" accept="image/*" class="form-control" />
+                    </div>
+                    
+                    <button class="btn btn-warning btn-md" id="account_edit__btn">Enregistrer les modifications</button>
+                
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

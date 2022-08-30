@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une offre{% endblock %}
+
+{% block content %}
+    <div id="add_page">
+        <div id="add_bloc">
+            <div id="add_form">
+                <h2 id="add_title">Ajouter une offre</h2>
+                {{ form_start(form) }}
+                <div id="form_label">
+                    {{ form_label(form.name) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.name, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.description) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.description, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.price) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.price, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.illustration) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.illustration, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.sub_category) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.sub_category, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.region) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.region, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_label">
+                    {{ form_label(form.address) }}
+                <div>
+                <div id="form_widget">
+                    {{ form_widget(form.address, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                    {{ form_row(form.submit, { 'attr': { 'class': 'btn btn-success btn-md' } }) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

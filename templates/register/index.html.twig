@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'inscrire{% endblock %}
+
+{% block content %}
+    <div id="form_page">
+        {{ form_start(form) }}
+            <div id="inner_form">
+                <h2 id="register_title">Inscrivez-vous sur Leboncoin</h2>
+                <div id="form_widget">
+                    <div id="label_requis">
+                        {{ form_label(form.firstname) }}<p id="champ_requis">champ requis</p>
+                    </div>
+                    {{ form_widget(form.firstname, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_widget">
+                    <div id="label_requis">
+                        {{ form_label(form.lastname) }}<p id="champ_requis">champ requis</p>
+                    </div>
+                    {{ form_widget(form.lastname, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_widget">
+                    <div id="label_requis">
+                        {{ form_label(form.email) }}<p id="champ_requis">champ requis</p>
+                    </div>
+                    {{ form_widget(form.email, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_widget">
+                    <div id="label_requis">
+                        {{ form_label(form.password.first) }}<p id="champ_requis">champ requis</p>
+                    </div>
+                    {{ form_widget(form.password.first, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_widget">
+                    <div id="label_requis">
+                        {{ form_label(form.password.second) }}<p id="champ_requis">champ requis</p>
+                    </div>
+                    {{ form_widget(form.password.second, { 'attr': { 'class': 'form-control' } }) }}
+                </div>
+                <div id="form_widget">
+                    {{ form_widget(form.submit, { 'attr': { 'class': 'btn btn-success btn-md' } }) }}
+                </div>
+                <p id="already_registered">Déjà inscrit ? <a href="{{ path('login') }}" id="me_connecter">Me connecter</a></p>
+            </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Leboncoin, site de petites annonces gratuites{% endblock %}
+
+{% block content %}
+    <h1 id="homepage_title">Des millions de petites annonces et autant d'occasions de se faire plaisir</h1>
+    <div id="homepage_page">
+        <div id="homepage_search">
+            <div id="body_search_bar_page">
+                {{ form_start(form) }}
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">{{ form_label(form.sub_category) }}</div>
+                                    <div class="card-options">
+                                        <a href="#" class="card-options-collapse" data-toggle="card-collapse">
+                                            <i class="fe fe-chevron-up"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="custom-controls-stacked">
+                                        <div class="dropdown">
+                                            {{ form_widget(form.sub_category, { 'attr': {
+                                                'class': 'form-select'
+                                                }})
+                                            }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="countries">
+                                    {{ form_row(form.location, { 'attr': {'class': 'form-select' } }) }}
+                                </div>
+                                <div id="form_submit">
+                                    {{ form_row(form.submit, { 'attr': {'class': 'btn btn-success btn-sm'} }) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+        {% if app.user %}
+            {% if latestSearches %}
+                <div id="latestSearches_bloc">
+                    <div id="latestSearches">
+                        <h2 id="latestSearches_title"><img src="assets/images/logo_search.png" id="logo_latest_search">Recherches récentes</h2>
+                        <div id="latestSearches_text">
+                            {% for latestSearch in latestSearches %}
+                                <div id="latestSearch">
+                                    <div id="lastestSearch_text">
+                                        <div id="latestSearch_subCategory">
+                                            {{ latestSearch.subCategory|capitalize }}
+                                        </div>
+                                        <div id="latestSearch_location">
+                                            <img src="assets/images/logo_localisation.jpg" id="logo_localisation">{{ latestSearch.location }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+{% endblock %}

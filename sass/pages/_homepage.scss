@@ -1,0 +1,121 @@
+body
+{
+    margin: 0;
+    background-color: rgb(248, 248, 244);
+}
+#homepage_title
+{
+    font-size: 1.6em;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+#homepage_page
+{
+    display: flex;
+    flex-direction: column;
+}
+#homepage_search
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+#body_search_bar_page
+{
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+#body_search_bar
+{
+    display: flex;
+    margin-top: -50px;
+}
+#form_submit
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-secondary
+{
+    background-color: white;
+    color: black;
+}
+.btn-secondary:hover
+{
+    color: unset;
+    background-color: unset;
+}
+.btn-success
+{
+    margin-right: 16px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+#countries
+{
+    width: 242px;
+    margin-left: 15px;
+}
+#latestSearches_bloc
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#logo_latest_search
+{
+    height: 20px;
+    margin-right: 7px;
+    margin-top: -4px;
+}
+#latestSearches_title
+{
+    font-size: 1.6em;
+    margin-bottom : 30px;
+}
+#latestSearches
+{
+    display: flex;
+    flex-direction: column;
+}
+#latestSearches_text
+{
+    display: flex;
+}
+#latestSearch
+{
+    background-color: white;
+    width: 300px;
+    height: 120px;
+    padding: 10px;
+    padding-left: 20px;
+    margin-right: 20px;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+#lastestSearch_text
+{
+    display: flex;
+    flex-direction: column;
+}
+#latestSearch_subCategory
+{
+    font-size: 1.4em;
+}
+#latestSearch_location
+{
+    display: flex;
+    margin-top: 38px;
+    margin-left: -15px;
+}
+#logo_localisation
+{
+    height: 33px;
+    margin-top: -5px;
+    margin-right: -7px;
+}

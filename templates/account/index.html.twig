@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block content %}
+    <div class="account">
+        <h2 class="account__title">Mon espace personnel</h2>
+        <div class="account__links">
+            <a href="{{ path('account_offers') }}" class="account__offers">Gérer mes offres</a>
+            <a href="{{ path('logout') }}">Me déconnecter</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Se connecter{% endblock %}
+
+{% block content %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <div id="login_form_page">
+        <div id="login_form">
+            <h2 class="h3 mb-3 font-weight-normal" id="login_title">Bonjour !</h2>
+            <p id="login_subtitle">Connectez-vous pour découvrir toutes nos fonctionnalités.</p>
+            <form method="post">
+                <div id="login_email">
+                    <div id="login_email_label">
+                        <label for="inputEmail">Votre email</label>
+                        <p id="champ_requis_email">champ requis</p>
+                    </div>
+                    <input type="email" name="email" id="input" class="form-control" autocomplete="email" required autofocus>
+                </div>
+                <div id="login_pwd">
+                    <div id="login_pwd_label">
+                        <label for="inputPassword">Votre mot de passe</label>
+                        <p id="champ_requis_pwd">champ requis</p>
+                    </div>
+                    <input type="password" name="password" id="input" class="form-control" autocomplete="current-password" required>
+                    <p><a href="" id="forgotten_pwd">Mot de passe oublié</a></p>
+                <div id="login_email">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                {# Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html #}
+                <div class="checkbox mb-3" id="remember_me">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                    </label>
+                </div>
+                <button class="button__button--dark_blue">Me connecter</button>
+            </form>
+            <p id="join_us">Envie de nous rejoindre ?<a href="{{ path('register') }}" id="create_account">Créer un compte</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Offres disponibles{% endblock %}
+
+{% block content %}
+    {% if productFound is same as(TRUE) %}
+        <h2 id="title">Offres disponibles</h2>
+        <div id="offres_page">
+            <div id="offres_display">
+                {% for product in products %}
+                    <div id="offres_single_bloc">
+                        <div id="offres_single">
+                            <p id="offer_name"><img src="{{ product.illustration }}" id="illustration"></p>
+                            <div id="offers_text">
+                                <p>{{ product.name }}</p>
+                                <p>{{ product.description }}</p>
+                                <p>{{ product.price }} €</p>
+                                <p>{{ product.createdAt|date('d/m, H:i') }}</p>
+                            </div>
+                        </div>
+                        <div id="logo_heart_div">
+                            <a href="{{ path('add_to_favorites', { 'id' : product.id  }) }}"><img src="{{ asset('assets/images/logo_heart.png') }}" id="logo_heart"></a>
+                        </div>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="pagination_navbar">
+            {{ knp_pagination_render(products) }}
+        </div>
+    {% else %}
+        <h2 class="title">Offres disponibles</h2>
+        <div id="noProducts">
+            <p id="noProductsText">Aucune offre n'est actuellement disponible pour votre recherche :&#40;</p>
+            <p><a href="{{ path('homepage') }}">Revenir en arrière</a></p>
+        </div>
+    {% endif %}
+{% endblock %}

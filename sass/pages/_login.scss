@@ -1,0 +1,93 @@
+#login_form_page
+{
+    display: flex;
+    justify-content: center;
+}
+#login_form
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    width: fit-content;
+    @include form-background;
+    padding-bottom: 30px;
+}
+#champ_requis_email, #champ_requis_pwd
+{
+    font-size: 0.8em;
+    color: $champs_requis_color;
+}
+#champ_requis_email
+{
+    margin-top: 3px;
+    margin-left: 232px;
+}
+#champ_requis_pwd
+{
+    margin-top: 3px;
+    margin-left: 175px;
+}
+#forgotten_pwd
+{
+    text-decoration: unset;
+    font-size: 0.8em;
+}
+#login_email_label, #login_pwd_label
+{
+    display: flex;
+    margin-bottom: -8px;
+}
+#login_email, #login_pwd
+{
+    margin-top: 20px;
+}
+#remember_me
+{
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+#input:not(:focus):invalid
+{
+    background-color: rgba(255, 0, 0, 0.9);
+    transition: background-color 200ms;
+    color: white;
+}
+$btn-color: rgb(65, 131, 215);
+.button {
+    &__button--dark_blue {
+    width: 390px;
+    height: 30px;
+    color: white;
+    background-color: $btn-color;
+    border: unset;
+        &:hover {
+            background: radial-gradient(circle, lighten($btn-color, 2) 0%, darken($btn-color, 5) 100%);
+            transform: scale(1.015);
+        }   
+    }
+}
+#login_title
+{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#login_subtitle
+{
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+#join_us
+{
+    margin-top: 35px;
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+}
+#create_account
+{
+    margin-left: 7px;
+    text-decoration: unset;
+}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes offres{% endblock %}
+
+{% block content %}
+    {% if products %}
+        <div class="body">
+            <h2 class="body__title">Mes offres</h2>
+            <div class="body__bloc">
+                {% for product in products %}
+                    <div class="offers__bloc">
+                        <p><img src="{{ asset(product.illustration) }}" class="offers__img"></p>
+                        <div class="offers__text">
+                            <p>{{ product.name }}</p>
+                            <p>{{ product.price }} €</p>
+                            <p>{{ product.createdAt|date('d/m, H:i') }}</p>
+                            <div class ="offers__buttons">
+                                <a href="{{ path('account_edit_offers', { 'id': product.id }) }}"><button class="btn btn-warning btn-sm" id="remove_button">Modifier</button></a>
+                                <a href="{{ path('account_delete_offers', { 'id': product.id }) }}"><button class="btn btn-danger btn-sm" id="edit_button">Supprimer</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="offers__hr">
+                {% endfor %}
+            </div>
+        </div>
+        <div class="body__pagination_nav">
+            {{ knp_pagination_render(products) }}
+        </div>
+    {% else %}
+        <div class="no_offers">
+            <p>Vous n'avez actuellement aucun favoris.</p>
+            <p><a href="{{ path('homepage') }}">Revenir en arrière</a></p>
+        </div>
+    {% endif %}
+{% endblock %}

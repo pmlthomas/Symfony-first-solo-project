@@ -1,19 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>{% block title %}Leboncoin, site de petites annonces gratuites{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/js/bootstrap.bundle.min.js') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_script_tags('app') }}
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
     </head>
+    <nav>
+        <div id="navbar">
+            <div id="navbarLeft">
+                <ul id="navbar_ul">
+                    <li>
+                        <a href="{{ path('homepage') }}">
+                            <img src="{{ asset('assets/images/logo_leboncoin.png') }}" id="logo_leboncoin" />
+                        </a>
+                    </li>
+                    <li id="annonce"><a href="{{ path('add_offer') }}" id="annonce_href">Déposer une annonce</a></li>
+                    <li>
+                        <img src="{{ asset('assets/images/logo_search.png') }}" id="logo_search" />
+                    </li>
+                    <li>Rechercher</li>
+                </ul>
+            </div>
+            <div id="navbarRight">
+                <ul id="navbar_ul_top">
+                    <li>
+                        <img src="{{ asset('assets/images/logo_cloche.png') }}" id="logo_cloche" />
+                    </li>
+                    <li>
+                        <img src="{{ asset('assets/images/logo_coeur.png') }}" id="logo_coeur" />
+                    </li>
+                    <li>
+                        <img src="{{ asset('assets/images/logo_message.png') }}" id="logo_message" />
+                    </li>
+                    <li>
+                        {% if app.user %}
+                            <a href="{{ path('account') }}">
+                                <img src="{{ asset('assets/images/logo_bonhomme.png') }}" id="logo_bonhomme" />
+                            </a>
+                        {% else %}
+                            <a href="{{ path('login') }}">
+                                <img src="{{ asset('assets/images/logo_bonhomme.png') }}" id="logo_bonhomme" />
+                            </a>
+                        {% endif %}
+                    </li>
+                </ul>
+                <ul class="navbar_ul_bottom">
+                    <li class="navbar_ul_bottom__li">Mes recherches</li>
+                    <li class="navbar_ul_bottom__li_a"><a href="{{ path('favorites') }}">Favoris</a></li>
+                    <li class="navbar_ul_bottom__li">Messages</li>
+                    <li class="navbar_ul_bottom__li_a">
+                        {% if app.user %}
+                            <a href="{{ path('account') }}">Mon compte</a>
+                        {% else %}
+                            <a href="{{ path('login') }}">Se connecter</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <body>
-        {% block body %}{% endblock %}
+        {% block content %}
+        {% endblock %}
+        <footer>
+            {% block footer %}
+            {% endblock %}
+        </footer>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </html>

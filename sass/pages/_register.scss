@@ -1,0 +1,55 @@
+
+#form_page
+{
+    display: flex;
+    justify-content: center;
+}
+#inner_form
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    @include form-background;
+    padding-bottom: 46px;
+}
+#form_widget
+{
+    width: 400px;
+    margin-top: 10px;
+}
+#champ_requis
+{
+    font-size: 0.8em;
+    color: $champs_requis_color;
+    margin-top: 4px;
+}
+#register_form_submit
+{
+    width: 400px;
+    margin-top: 5px;
+}
+#label_requis
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -7px;
+}
+#register_title
+{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: -16px;
+}
+#already_registered
+{
+    margin-top: 7px;
+}
+#me_connecter
+{
+    text-decoration: unset;
+}

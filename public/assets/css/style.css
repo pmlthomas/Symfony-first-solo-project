@@ -1,0 +1,650 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 1240px;
+  height: 72px;
+  margin-bottom: -14px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+
+#navbarLeft ul {
+  display: flex;
+  font-size: 1.2em;
+}
+
+#navbarRight ul {
+  display: flex;
+  font-size: 1.05em;
+}
+
+#navbarLeft {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#navbarLeft li {
+  padding-right: 20px;
+}
+
+#navbarRight {
+  margin-right: 60px;
+  margin-top: -1px;
+}
+
+#navbarRight li {
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+#navbar_ul, .navbar_ul_bottom, #navbar_ul_top {
+  list-style-type: none;
+}
+
+#logo_leboncoin {
+  margin-top: -10px;
+  height: 37px;
+}
+
+#annonce {
+  background-color: #ff6e14;
+  border-radius: 5px;
+  margin-top: -8px;
+  margin-right: 20px;
+  width: fit-content;
+  padding: 8px !important;
+  color: white;
+}
+
+#annonce_href {
+  color: white;
+}
+
+#annonce_href:hover {
+  color: black;
+}
+
+#logo_search {
+  height: 24px;
+  margin-right: -13px;
+}
+
+#logo_cloche, #logo_bonhomme, #logo_message, #logo_coeur {
+  height: 24px;
+  margin-left: 44px;
+  margin-bottom: -15px;
+}
+
+#logo_cloche {
+  margin-left: 47px;
+}
+
+#logo_coeur {
+  padding-left: 17px;
+  margin-right: -10px;
+}
+
+#logo_bonhomme {
+  padding-left: 20px;
+}
+
+#navbar_hr {
+  margin-top: 15px;
+  opacity: 0.6;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.navbar_ul_bottom__li:hover {
+  border-bottom: 2px solid black;
+}
+.navbar_ul_bottom__li_a > a:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.account_edit {
+  display: flex;
+  justify-content: center;
+}
+.account_edit__bloc {
+  margin-top: 50px;
+  width: fit-content;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-bottom: 57px;
+}
+.account_edit__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: -5px;
+  width: fit-content;
+}
+.account_edit__form h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+.account_edit__form label {
+  margin-bottom: 7px;
+}
+.account_edit__form input, .account_edit__form textarea {
+  margin-bottom: 22px;
+  width: 390px;
+}
+
+#account_edit__btn {
+  width: 390px;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(248, 248, 244);
+}
+
+#homepage_title {
+  font-size: 1.6em;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+#homepage_page {
+  display: flex;
+  flex-direction: column;
+}
+
+#homepage_search {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+#body_search_bar_page {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+#body_search_bar {
+  display: flex;
+  margin-top: -50px;
+}
+
+#form_submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: black;
+}
+
+.btn-secondary:hover {
+  color: unset;
+  background-color: unset;
+}
+
+.btn-success {
+  margin-right: 16px;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+#countries {
+  width: 242px;
+  margin-left: 15px;
+}
+
+#latestSearches_bloc {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#logo_latest_search {
+  height: 20px;
+  margin-right: 7px;
+  margin-top: -4px;
+}
+
+#latestSearches_title {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+}
+
+#latestSearches {
+  display: flex;
+  flex-direction: column;
+}
+
+#latestSearches_text {
+  display: flex;
+}
+
+#latestSearch {
+  background-color: white;
+  width: 300px;
+  height: 120px;
+  padding: 10px;
+  padding-left: 20px;
+  margin-right: 20px;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+#lastestSearch_text {
+  display: flex;
+  flex-direction: column;
+}
+
+#latestSearch_subCategory {
+  font-size: 1.4em;
+}
+
+#latestSearch_location {
+  display: flex;
+  margin-top: 38px;
+  margin-left: -15px;
+}
+
+#logo_localisation {
+  height: 33px;
+  margin-top: -5px;
+  margin-right: -7px;
+}
+
+#login_form_page {
+  display: flex;
+  justify-content: center;
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  width: fit-content;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+#champ_requis_email, #champ_requis_pwd {
+  font-size: 0.8em;
+  color: rgb(119, 119, 119);
+}
+
+#champ_requis_email {
+  margin-top: 3px;
+  margin-left: 232px;
+}
+
+#champ_requis_pwd {
+  margin-top: 3px;
+  margin-left: 175px;
+}
+
+#forgotten_pwd {
+  text-decoration: unset;
+  font-size: 0.8em;
+}
+
+#login_email_label, #login_pwd_label {
+  display: flex;
+  margin-bottom: -8px;
+}
+
+#login_email, #login_pwd {
+  margin-top: 20px;
+}
+
+#remember_me {
+  padding-top: 10px;
+  font-size: 0.9em;
+}
+
+#input:not(:focus):invalid {
+  background-color: rgba(255, 0, 0, 0.9);
+  transition: background-color 200ms;
+  color: white;
+}
+
+.button__button--dark_blue {
+  width: 390px;
+  height: 30px;
+  color: white;
+  background-color: rgb(65, 131, 215);
+  border: unset;
+}
+.button__button--dark_blue:hover {
+  background: radial-gradient(circle, #4988d9 0%, #2c75d2 100%);
+  transform: scale(1.015);
+}
+
+#login_title {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#login_subtitle {
+  font-size: 0.9em;
+  margin-bottom: 25px;
+}
+
+#join_us {
+  margin-top: 35px;
+  margin-bottom: 11px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+#create_account {
+  margin-left: 7px;
+  text-decoration: unset;
+}
+
+#form_page {
+  display: flex;
+  justify-content: center;
+}
+
+#inner_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-bottom: 46px;
+}
+
+#form_widget {
+  width: 400px;
+  margin-top: 10px;
+}
+
+#champ_requis {
+  font-size: 0.8em;
+  color: rgb(119, 119, 119);
+  margin-top: 4px;
+}
+
+#register_form_submit {
+  width: 400px;
+  margin-top: 5px;
+}
+
+#label_requis {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -7px;
+}
+
+#register_title {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-top: -16px;
+}
+
+#already_registered {
+  margin-top: 7px;
+}
+
+#me_connecter {
+  text-decoration: unset;
+}
+
+.title {
+  margin-top: 40px;
+  margin-bottom: 2px;
+  margin-left: 100px;
+  font-size: 1.7em;
+}
+
+#no_offer {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+#go_back {
+  text-decoration: none;
+}
+
+#pagination_bloc {
+  display: flex;
+}
+
+#offres_page {
+  display: flex;
+  flex-direction: column;
+}
+
+#offres_display {
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#offres_single {
+  width: 680px;
+  display: flex;
+}
+
+#offres_single_bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  width: 680px;
+  margin-top: -30px;
+  margin-bottom: 25px;
+}
+
+#logo_heart_div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#logo_heart {
+  display: flex;
+  align-self: center;
+  height: 22px;
+  margin-top: -70px;
+}
+
+#logo_heart_div {
+  width: 680px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#pagination_navbar {
+  margin-left: 280px;
+  margin-top: -15px;
+  padding-bottom: 20px;
+}
+
+#offer_name {
+  margin-bottom: 3px;
+  font-size: 1.3em;
+}
+
+#offer_description {
+  margin-bottom: 7px;
+}
+
+#illustration {
+  height: 180px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+#illustration_text {
+  display: flex;
+}
+
+#offers_text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+#offer_createdAt {
+  margin-top: 10px;
+}
+
+#edit_button {
+  margin-left: 7px;
+}
+
+#my_offers_buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 205px;
+  margin-top: 35px;
+}
+
+#noProducts {
+  margin-top: 25px;
+  margin-left: 70px;
+}
+
+#noProductsText {
+  margin-bottom: 7px;
+}
+
+#add_page {
+  display: flex;
+  flex-direction: column;
+}
+
+#add_bloc {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#add_title {
+  font-size: 1.6em;
+}
+
+#add_form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 730px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#form_widget {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  margin-bottom: 13px;
+  margin-top: 5px;
+}
+
+#offer_submit {
+  width: 420px;
+  margin-top: 5px;
+}
+
+.account__title {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+  margin-left: 70px;
+}
+.account__links {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: 70px;
+}
+.account__offers {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.body__title {
+  margin-top: 40px;
+  margin-bottom: 2px;
+  margin-left: 100px;
+  font-size: 1.7em;
+}
+.body__bloc {
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.body__pagination_nav {
+  margin-left: 280px;
+  margin-top: -15px;
+  padding-bottom: 20px;
+}
+
+.offers__bloc {
+  width: 680px;
+  display: flex;
+}
+.offers__img {
+  height: 180px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+.offers__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.offers__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 205px;
+  margin-top: 35px;
+}
+.offers__hr {
+  width: 680px;
+  margin-top: -35px;
+  margin-bottom: 25px;
+}
+
+.no_offers__text {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+.no_offers__go_back {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
